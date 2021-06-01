@@ -1,0 +1,103 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: #282c35;
+  width: 100%;
+  height: 65px;
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  position: absolute;
+  padding: 0;
+}
+
+.nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav li a {
+  margin: 0;
+  height: 65px;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #c0c0c0;
+  padding: 20px;
+}
+
+.nav li a:hover {
+  background-color: #c0c0c0;
+  color: #181818;
+  height: 65px;
+}
+
+#logo {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#text {
+  font-size: 40px;
+  color: #262335;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.pop {
+  animation-name: pop;
+  animation: pop 0.8s alternate;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+@keyframes pulsate {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.pulsate {
+  animation-name: pulsate;
+  animation-duration: 1s;
+}
+
+#text:hover {
+  animation-name: pulsate;
+  animation-duration: 1s;
+}
+
+#text1:hover {
+  animation-name: pulsate;
+  animation-duration: 2s;
+}

@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+
+//importing components
+import Landing from "./components/Landing";
+import Footer from "./components/footer";
+import StockTable from "./components/StockTable";
+import StockHistoryTable from "./components/StockHistoryTable";
 
 function App() {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#c0c0c0"; //setting the background color fro the entire web page
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <Landing style={{ position: "sticky" }} />
       </header>
+      <div className="container">
+        <div id="ko" style={{ paddingTop: "100px" }}>
+          <StockTable />
+        </div>
+        <div id="ok" style={{ paddingTop: "100px" }}>
+          <StockHistoryTable />
+        </div>
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
